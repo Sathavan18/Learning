@@ -68,7 +68,7 @@ def selection_sort(nums):
 # Time Complexity: O(n^2)
 # Best Time: O(n^2)
 # Space Complexity: O(1)
-'''
+
 # Insertion Sort
 def insertion_sort(nums):
     for i in range(1, len(nums)):
@@ -83,3 +83,15 @@ def insertion_sort(nums):
 # Time Complexity: O(n^2)
 # Best Time: O(n^2)
 # Space Complexity: O(1)
+'''
+# Sliding Window - Leetcode 643
+def findMaxAverage(nums, k):
+    total = 0
+    for i in range(k):
+        total += nums[i]
+    average = total/float(k)
+    for i in range(k,len(nums)):
+        total = (total - nums[i-k] + nums[i])
+        if (total/float(k)) > average:
+            average = total/float(k)
+    return average

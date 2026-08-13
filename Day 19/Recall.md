@@ -1,0 +1,1 @@
+Full Tree - for each node, there needs to be 0 or 2 children.
